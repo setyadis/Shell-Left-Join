@@ -1,0 +1,20 @@
+/INFILE=FILE_INPUT_1.txt
+ /FIELD=(VARIABEL_1      ,POS=1,  SEP='|')
+ /FIELD=(VARIABEL_2      ,POS=2,  SEP='|')
+ /FIELD=(VARIABEL_3      ,POS=3,  SEP='|')
+/ALIAS=b
+
+/INFILE=FILE_INPUT_2.txt
+/FIELD=(VARIABEL_4       ,POS=1,SEP='|')
+/FIELD=(VARIABEL_5       ,POS=2,SEP='|')
+/FIELD=(VARIABEL_6       ,POS=3,SEP='|')
+/ALIAS=a
+
+/join LEFT_OUTER a b where a.VARIABEL_1 EQ b.VARIABEL_4
+
+/OUTFILE=FILE_OUTPUT.txt
+/FIELD=(INSYS_SERIAL                    ,POS=1,SEP='|')
+/FIELD=(REGION_ID                       ,POS=2,SEP='|')
+/FIELD=(HP_NO                           ,POS=3,SEP='|')
+
+/STAT=OUTPUT.stat

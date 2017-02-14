@@ -1,0 +1,9 @@
+/INFILE=FILE.txt
+/FIELD=(VARIABEL_1        ,POS=1,SEP='|')
+/FIELD=(VARIABEL_2        ,POS=2,SEP='|')
+/FIELD=(VARIABEL_3        ,POS=3,SEP='|')
+
+/SORT
+/KEY=VARIABEL_1
+
+/OUTFILE=OUTPUT.txt
